@@ -1,0 +1,15 @@
+interface:
+  display_name: "Figma Pixel Perfect Web"
+  short_description: "Ultra-precise web implementation from Figma"
+  default_prompt: "Use $figma-pixel-perfect-web to build this web UI from a Figma link with strict pixel-perfect checks and zero approximate values."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "figma"
+      description: "Figma MCP server"
+      transport: "streamable_http"
+      url: "https://mcp.figma.com/mcp"
+
+policy:
+  allow_implicit_invocation: true

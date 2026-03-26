@@ -1,0 +1,13 @@
+{
+  "styles": [
+    {
+      "style_name": "Heading/H1",
+      "expected_family": "Inter",
+      "expected_face": "Inter SemiBold",
+      "expected_source": "project-local",
+      "expected_file": "assets/fonts/Inter-SemiBold.woff2",
+      "expected_weight": 600,
+      "expected_style": "normal"
+    }
+  ]
+}

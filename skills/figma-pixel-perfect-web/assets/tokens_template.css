@@ -1,0 +1,54 @@
+:root {
+  /* Resolve alias chain first: alias -> alias -> raw value (Figma final). */
+  --figma-color-background-final: #000000;
+  --figma-color-foreground-final: #ffffff;
+
+  /* Keep both token alias reference and resolved value for traceability. */
+  --figma-color-background-alias: "color/background/default";
+  --figma-color-foreground-alias: "color/text/primary";
+
+  /* Typography token mapping must target exact source + exact face. */
+  --figma-font-family-primary: "REPLACE_WITH_EXACT_FIGMA_FAMILY";
+  --figma-font-face-primary: "REPLACE_WITH_EXACT_FIGMA_FACE";
+  --figma-font-file-primary: "REPLACE_WITH_EXACT_FONT_FILE";
+  --figma-font-source-primary: "project-local|package|platform";
+  --figma-font-size-primary: 0px;
+  --figma-font-weight-primary: 400;
+  --figma-font-style-primary: normal;
+  --figma-line-height-mode-primary: px;
+  --figma-line-height-primary: 0px;
+  --figma-letter-spacing-mode-primary: px;
+  --figma-letter-spacing-primary: 0px;
+  --figma-paragraph-spacing-primary: 0px;
+  --figma-text-transform-primary: none;
+  --figma-text-decoration-primary: none;
+
+  /* Variable font axes: set only when explicitly confirmed by Figma. */
+  --figma-font-axis-wght-primary: 400;
+  --figma-font-axis-opsz-primary: 14;
+
+  /* Per-side spacing: do not collapse without explicit confirmation. */
+  --figma-space-top: 0px;
+  --figma-space-right: 0px;
+  --figma-space-bottom: 0px;
+  --figma-space-left: 0px;
+  --figma-gap-primary: 0px;
+
+  /* Fractional values allowed when Figma uses subpixel placement. */
+  --figma-hairline-width: 0.5px;
+  --figma-border-width-default: 0px;
+
+  /* Corner behavior */
+  --figma-radius-default: 0px;
+  --figma-corner-smoothing-default: 0;
+
+  /* Effect and compositing hints */
+  --figma-blend-mode-primary: normal;
+  --figma-shadow-stack-order: "shadow1>shadow2>stroke>blur";
+}
+
+/* Runtime check required:
+   1) expected face loaded,
+   2) computed style matches face,
+   3) fallback not detected,
+   4) text metrics confirmed against Figma. */

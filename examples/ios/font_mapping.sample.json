@@ -1,0 +1,14 @@
+{
+  "styles": [
+    {
+      "style_name": "Heading/H1",
+      "expected_family": "SF Pro Text",
+      "expected_face": "SF Pro Text Semibold",
+      "expected_source": "platform",
+      "expected_runtime_name": "SFProText-Semibold",
+      "expected_weight": "semibold",
+      "expected_style": "normal",
+      "expected_file": "Resources/Fonts/SFProText-Semibold.otf"
+    }
+  ]
+}

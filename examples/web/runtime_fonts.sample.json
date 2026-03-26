@@ -1,0 +1,13 @@
+{
+  "fonts_status": "loaded",
+  "entries": [
+    {
+      "style_name": "Heading/H1",
+      "computed_family": "Inter",
+      "computed_face": "Inter SemiBold",
+      "computed_weight": 600,
+      "computed_style": "normal",
+      "fallback_detected": false
+    }
+  ]
+}

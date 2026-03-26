@@ -1,0 +1,15 @@
+interface:
+  display_name: "Figma Pixel Perfect iOS"
+  short_description: "Ultra-precise iOS implementation from Figma"
+  default_prompt: "Use $figma-pixel-perfect-ios to build this iOS screen from a Figma link with strict pixel-perfect checks and zero approximate values."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "figma"
+      description: "Figma MCP server"
+      transport: "streamable_http"
+      url: "https://mcp.figma.com/mcp"
+
+policy:
+  allow_implicit_invocation: true

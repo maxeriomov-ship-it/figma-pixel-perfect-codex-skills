@@ -1,0 +1,14 @@
+{
+  "registered_fonts": ["SFProText-Semibold"],
+  "entries": [
+    {
+      "style_name": "Heading/H1",
+      "runtime_name": "SFProText-Semibold",
+      "runtime_family": "SF Pro Text",
+      "runtime_face": "SF Pro Text Semibold",
+      "runtime_weight": "semibold",
+      "runtime_style": "normal",
+      "fallback_detected": false
+    }
+  ]
+}

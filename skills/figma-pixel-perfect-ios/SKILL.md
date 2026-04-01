@@ -83,6 +83,15 @@ description: Use for ultra-precise iOS screen implementation from Figma links, f
 4. точный platform font source
 5. легальный проектный source, явно доступный в контуре проекта
 
+### 3.5) Mandatory font acquisition and install/register
+- Если exact font отсутствует локально, skill обязан автоматически попытаться:
+  1. найти font package/asset в текущем проекте и зависимостях
+  2. скачать exact font из доверенного и легального источника проекта
+  3. зарегистрировать его в iOS проекте (bundle + runtime registration)
+  4. сразу применить exact face в SwiftUI/UIKit коде
+- Нельзя откладывать регистрацию на "позже", если это можно сделать сейчас в среде.
+- Нельзя скачивать из untrusted источников.
+
 ### 4) Exact font mapping
 Для каждого style зафиксировать mapping:
 - Figma style name
@@ -119,6 +128,7 @@ description: Use for ultra-precise iOS screen implementation from Figma links, f
 - Не скачивать шрифты со случайных сайтов.
 - Не использовать сомнительные и нелегальные источники.
 - Сначала использовать легально доступные шрифты из проекта/его инфраструктуры.
+- Если exact font отсутствует локально, нужно автоматически искать, скачивать и регистрировать его из trusted project-approved source.
 - Если exact source отсутствует, явно помечать `blocked by missing font source`.
 - При таком блокере задача не может быть fully complete.
 
@@ -140,6 +150,7 @@ description: Use for ultra-precise iOS screen implementation from Figma links, f
 - Нельзя игнорировать variable axes/optical size/font features, если они есть.
 - Нельзя менять wrapping/container width/line count ради удобства.
 - Нельзя скрывать отсутствие точного и легального font source.
+- Нельзя пропускать попытку auto-acquisition/install/register, если trusted source доступен.
 - Нельзя заявлять completion при неподтвержденной typography.
 
 ## Что проверять перед завершением

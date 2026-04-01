@@ -9,6 +9,8 @@
 7. Нельзя сливать разные face в один record ради упрощения.
 8. Нельзя использовать broad weight ranges без явного подтверждения из Figma и source.
 9. Для variable fonts указывать активные axes и подтвержденные значения.
-10. Если face не найден, mapping помечается blocked и typography completion запрещен.
-11. Источник шрифта должен быть легальным и проверяемым.
-12. Любой невалидный mapping автоматически делает typography `NOT CONFIRMED`.
+10. Если face не найден локально, обязателен auto-search + auto-download + auto-install из trusted source.
+11. После установки обязателен update `@font-face` и немедленное применение в коде.
+12. Если после обязательной попытки acquisition exact face недоступен, mapping помечается blocked.
+13. Источник шрифта должен быть легальным и проверяемым.
+14. Любой невалидный mapping автоматически делает typography `NOT CONFIRMED`.

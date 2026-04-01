@@ -9,4 +9,6 @@
 7. Dynamic Type не включать, если это не требуется макетом или проектными требованиями.
 8. Проверять, что фактически применен нужный face/weight/style в коде.
 9. При fallback signal typography помечается неподтвержденной.
-10. Если exact и легальный source отсутствует, фиксировать blocker и не закрывать typography.
+10. Если exact face отсутствует локально, обязателен auto-search + auto-download + auto-register из trusted source.
+11. После registration обязателен runtime-check доступности exact runtime/PostScript name.
+12. Если exact и легальный source отсутствует после обязательной попытки acquisition, фиксировать blocker и не закрывать typography.

@@ -23,6 +23,7 @@ These skills are intentionally strict for teams that need measurable fidelity, n
 - Figma is the single source of truth.
 - Any visible mismatch is treated as a defect.
 - Typography is the highest-priority control zone.
+- Exact fonts are actively acquired and installed/registered when missing (trusted sources only).
 - Missing exact font source blocks full completion.
 - Runtime verification is required, not just style declaration.
 
@@ -127,8 +128,9 @@ Each skill includes practical scripts for strict typography checks:
 
 ## Notes
 
+- These skills actively search, download, install/register, and apply missing exact fonts when trusted legal sources are available.
 - These skills do not download fonts from untrusted sources.
-- If exact legal font sources are missing, typography is marked blocked and strict completion is not allowed.
+- If exact legal font sources are still missing after acquisition attempts, typography is marked blocked and strict completion is not allowed.
 
 ## License
 

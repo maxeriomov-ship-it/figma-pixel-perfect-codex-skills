@@ -85,6 +85,15 @@ description: Use for ultra-precise web implementation from Figma links, frames, 
 4. package-based font setup
 5. легальный проектный источник, явно доступный в контуре проекта
 
+### 3.5) Mandatory font acquisition and install
+- Если exact font отсутствует локально, skill обязан автоматически попытаться:
+  1. найти font package/asset в существующей инфраструктуре проекта
+  2. скачать exact font из доверенного и легального источника проекта
+  3. установить/подключить font в проекте (`@font-face`/package wiring)
+  4. сразу применить его в верстке
+- Нельзя откладывать подключение на "потом", если установка возможна в текущей среде.
+- Нельзя скачивать из untrusted источников.
+
 ### 4) Exact font mapping
 Для каждого style создай mapping:
 - Figma style name
@@ -121,6 +130,7 @@ description: Use for ultra-precise web implementation from Figma links, frames, 
 - Не скачивать шрифты со случайных сайтов.
 - Не использовать сомнительные или нелегальные источники.
 - Сначала использовать то, что уже есть в проекте или легально доступно в проекте.
+- Если exact font отсутствует локально, нужно автоматически искать и устанавливать его из trusted project-approved source.
 - Если exact и легальный source отсутствует, явно помечать `blocked by missing font source`.
 - При таком блокере задача может быть частично реализована, но не fully complete.
 
@@ -142,6 +152,7 @@ description: Use for ultra-precise web implementation from Figma links, frames, 
 - Нельзя игнорировать variable axes/optical size/font features при их наличии.
 - Нельзя менять wrapping, container width, line count ради удобства реализации.
 - Нельзя скрывать отсутствие точного и легального font source.
+- Нельзя пропускать попытку auto-acquisition/install, если trusted source доступен.
 - Нельзя заявлять completion при неподтвержденной typography.
 
 ## Что проверять перед завершением

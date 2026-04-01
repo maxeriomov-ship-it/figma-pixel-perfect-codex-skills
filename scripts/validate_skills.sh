@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 SKILLS=(
+  "$ROOT_DIR/skills/figma-pixel-perfect-router"
   "$ROOT_DIR/skills/figma-pixel-perfect-web"
   "$ROOT_DIR/skills/figma-pixel-perfect-ios"
 )
@@ -11,9 +12,14 @@ for skill in "${SKILLS[@]}"; do
   echo "Checking structure: $skill"
   test -f "$skill/SKILL.md"
   test -f "$skill/agents/openai.yaml"
-  test -d "$skill/references"
-  test -d "$skill/assets"
-  test -d "$skill/scripts"
+  if [[ ! -d "$skill/references" ]]; then
+    echo "Missing references dir: $skill/references"
+    exit 1
+  fi
+  if [[ ! -d "$skill/scripts" ]]; then
+    echo "Missing scripts dir: $skill/scripts"
+    exit 1
+  fi
 
 done
 
@@ -33,9 +39,19 @@ fi
 
 for skill in "${SKILLS[@]}"; do
   echo "Checking script CLIs in $skill"
-  python3 "$skill/scripts/inspect_layout.py" --help >/dev/null
-  python3 "$skill/scripts/verify_fonts.py" --help >/dev/null
-  python3 "$skill/scripts/inspect_text_metrics.py" --help >/dev/null
+  if [[ -f "$skill/scripts/inspect_layout.py" ]]; then
+    python3 "$skill/scripts/inspect_layout.py" --help >/dev/null
+  fi
+  if [[ -f "$skill/scripts/verify_fonts.py" ]]; then
+    python3 "$skill/scripts/verify_fonts.py" --help >/dev/null
+  fi
+  if [[ -f "$skill/scripts/inspect_text_metrics.py" ]]; then
+    python3 "$skill/scripts/inspect_text_metrics.py" --help >/dev/null
+  fi
+  if [[ -f "$skill/scripts/smoke_router.py" ]]; then
+    python3 "$skill/scripts/smoke_router.py" --help >/dev/null
+    python3 "$skill/scripts/smoke_router.py" --cases "$skill/scripts/smoke_cases.json" >/dev/null
+  fi
 done
 
 echo "Validation passed."

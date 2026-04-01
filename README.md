@@ -4,6 +4,10 @@ Two production-ready Codex skills for strict Figma-to-code delivery with **Figma
 
 ## Included Skills
 
+- `figma-pixel-perfect-router`
+  - First-pass router for Figma requests.
+  - Always triggers on Figma URL/node-id/screen-from-design intent and routes to the strict platform skill.
+
 - `figma-pixel-perfect-web`
   - Ultra-precise web implementation from Figma links, frames, pages, screens, components, or component sets.
   - Strong runtime typography pipeline: exact font source mapping, fallback detection, and text metrics verification.
@@ -26,6 +30,12 @@ These skills are intentionally strict for teams that need measurable fidelity, n
 
 ```text
 skills/
+  figma-pixel-perfect-router/
+    SKILL.md
+    agents/openai.yaml
+    references/
+    scripts/
+
   figma-pixel-perfect-web/
     SKILL.md
     agents/openai.yaml
@@ -68,6 +78,7 @@ This installs both skills into:
 ```bash
 cp -R skills/figma-pixel-perfect-web ~/.codex/skills/
 cp -R skills/figma-pixel-perfect-ios ~/.codex/skills/
+cp -R skills/figma-pixel-perfect-router ~/.codex/skills/
 ```
 
 ## Validate Locally
@@ -94,6 +105,12 @@ What it checks:
 
 - "Build this iOS screen from Figma"
 - "собери iOS экран по Figma"
+
+### Router
+
+- "https://www.figma.com/design/... implement this"
+- "node-id=12:34 build this screen"
+- "сверстай экран по фигме"
 
 ## Typography Verification Utilities
 

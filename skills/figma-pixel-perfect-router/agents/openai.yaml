@@ -1,0 +1,7 @@
+interface:
+  display_name: "Figma Pixel Perfect Router"
+  short_description: "ALWAYS trigger for any Figma link or build-screen-from-Figma request; route to web/iOS pixel-perfect skill."
+  default_prompt: "ALWAYS use $figma-pixel-perfect-router when the input contains a Figma link/node-id or asks to build/implement a screen from Figma. Route to $figma-pixel-perfect-web or $figma-pixel-perfect-ios before implementation."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "prompt": "https://www.figma.com/design/abc123/Test?node-id=1-2 сверстай по фигме",
+      "expect_trigger": true,
+      "expect_target": "figma-pixel-perfect-web"
+    },
+    {
+      "prompt": "Build this iOS screen from Figma: https://www.figma.com/file/abc",
+      "expect_trigger": true,
+      "expect_target": "figma-pixel-perfect-ios"
+    },
+    {
+      "prompt": "собери iOS экран по Figma, node-id=22:17",
+      "expect_trigger": true,
+      "expect_target": "figma-pixel-perfect-ios"
+    },
+    {
+      "prompt": "Implement landing page from Figma link",
+      "expect_trigger": true,
+      "expect_target": "figma-pixel-perfect-web"
+    },
+    {
+      "prompt": "Summarize this markdown file",
+      "expect_trigger": false,
+      "expect_target": null
+    }
+  ]
+}

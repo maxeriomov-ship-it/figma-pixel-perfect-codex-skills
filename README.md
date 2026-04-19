@@ -1,31 +1,26 @@
-# Figma Pixel Perfect Skills for Codex
+# Codex Figma Precision Toolkit
 
-Two production-ready Codex skills for strict Figma-to-code delivery with **Figma-first** rules and **zero approximate values**.
+Codex Figma Precision Toolkit provides production-ready Codex skills for teams that require high-fidelity implementation from Figma across web and iOS. The toolkit is built around strict visual accuracy, exact typography handling, and verification-first delivery rather than approximate design translation.
 
 ## Included Skills
 
 - `figma-pixel-perfect-router`
-  - First-pass router for Figma requests.
-  - Always triggers on Figma URL/node-id/screen-from-design intent and routes to the strict platform skill.
-
+  - First-pass router for Figma-driven requests
+  - Detects Figma URLs, node IDs, and screen implementation intent, then routes to the correct strict skill
 - `figma-pixel-perfect-web`
-  - Ultra-precise web implementation from Figma links, frames, pages, screens, components, or component sets.
-  - Strong runtime typography pipeline: exact font source mapping, fallback detection, and text metrics verification.
-
+  - High-fidelity web implementation from Figma links, frames, screens, components, and component sets
+  - Includes typography verification for exact font mapping, fallback detection, and text-metrics validation
 - `figma-pixel-perfect-ios`
-  - Ultra-precise iOS implementation from Figma links, frames, pages, screens, components, or component sets.
-  - Strong typography pipeline: exact font discovery, registration/runtime verification, and fallback refusal.
+  - High-fidelity iOS implementation from Figma links, frames, screens, components, and component sets
+  - Includes exact font discovery, registration checks, runtime verification, and fallback refusal
 
-## Why These Skills
+## Core Principles
 
-These skills are intentionally strict for teams that need measurable fidelity, not "close enough":
-
-- Figma is the single source of truth.
-- Any visible mismatch is treated as a defect.
-- Typography is the highest-priority control zone.
-- Exact fonts are actively acquired and installed/registered when missing (trusted sources only).
-- Missing exact font source blocks full completion.
-- Runtime verification is required, not just style declaration.
+- Figma remains the source of truth for layout, spacing, typography, and visual behavior
+- Visible mismatches are treated as defects, not acceptable approximations
+- Typography is validated at runtime, not only declared in code
+- Missing exact fonts block strict completion until a trusted legal source is available
+- Verification is part of delivery, not an optional cleanup step
 
 ## Repository Structure
 
@@ -62,13 +57,13 @@ examples/
 
 ## Install in Codex
 
-### Option 1: copy from this repo
+### Option 1: install from this repository
 
 ```bash
 bash scripts/install_local.sh
 ```
 
-This installs both skills into:
+This installs the skills into:
 
 ```text
 ~/.codex/skills/
@@ -88,49 +83,49 @@ cp -R skills/figma-pixel-perfect-router ~/.codex/skills/
 bash scripts/validate_skills.sh
 ```
 
-What it checks:
+Validation checks:
 
 - required file structure
-- `SKILL.md` frontmatter validity (via Codex skill validator if available)
-- typography scripts CLI availability (`--help`)
+- `SKILL.md` frontmatter integrity
+- availability of typography CLI utilities
 
-## Typical Prompts That Auto-Trigger These Skills
+## Typical Prompts
 
 ### Web
 
 - "Build this page from Figma"
-- "Pixel perfect web from this Figma link"
-- "сверстай по ссылке из Figma"
+- "Implement this Figma screen for web with pixel precision"
+- "Сверстай экран из Figma без визуальных отклонений"
 
 ### iOS
 
 - "Build this iOS screen from Figma"
-- "собери iOS экран по Figma"
+- "Implement this Figma view for iOS with exact typography"
+- "Собери экран iOS по Figma без аппроксимаций"
 
 ### Router
 
 - "https://www.figma.com/design/... implement this"
 - "node-id=12:34 build this screen"
-- "сверстай экран по фигме"
+- "Сделай этот экран по Figma"
 
-## Typography Verification Utilities
+## Typography Utilities
 
-Each skill includes practical scripts for strict typography checks:
+Each skill includes practical scripts for strict typography verification:
 
 - `scripts/verify_fonts.py`
-  - verifies exact font source/face mapping
-  - checks fallback signals
+  - verifies exact font source and face mapping
+  - detects fallback signals
   - checks runtime-reported usage
-
 - `scripts/inspect_text_metrics.py`
-  - compares runtime text metrics against Figma spec
-  - checks line height, line count, container width, baseline, letter spacing
+  - compares runtime text metrics with the Figma specification
+  - checks line height, line count, container width, baseline, and letter spacing
 
 ## Notes
 
-- These skills actively search, download, install/register, and apply missing exact fonts when trusted legal sources are available.
-- These skills do not download fonts from untrusted sources.
-- If exact legal font sources are still missing after acquisition attempts, typography is marked blocked and strict completion is not allowed.
+- These skills can search for, install, register, and apply missing exact fonts when trusted legal sources are available
+- Fonts are not downloaded from untrusted sources
+- If an exact legal font source cannot be obtained, strict completion remains blocked by design
 
 ## License
 

@@ -1,6 +1,6 @@
 # Codex Figma Precision Toolkit
 
-Codex Figma Precision Toolkit provides production-ready Codex skills for teams that require high-fidelity implementation from Figma across web and iOS. The toolkit is built around strict visual accuracy, exact typography handling, and verification-first delivery rather than approximate design translation.
+Codex Figma Precision Toolkit is a high-standards implementation toolkit for teams that expect Figma-to-code delivery to hold up under real scrutiny. It is designed for web and iOS workflows where visual fidelity, typography accuracy, and disciplined execution are part of the product bar, not optional polish.
 
 ## Included Skills
 
